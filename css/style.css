@@ -5,6 +5,9 @@ body{
     display: flex;
     justify-content: center;
     align-items: center;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    color: #fff;
+    font-weight: 100;
 }
 
 .bg-video-container{
@@ -30,6 +33,22 @@ body{
     border: 2px solid #fff;
     border-radius: 50%;
     position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.clock__face::before{
+    content: "";
+    display: block;
+    position: absolute;
+    width: 20px;
+    height: 20px;
+    left: calc(50% - 10px);
+    top: calc(50% - 10px);
+    border-radius: 50%;
+    background-color: #fff;
 }
 
 .clock__face::after {
@@ -43,3 +62,53 @@ body{
     border-radius: 50%;
     border: 1px solid #fff;
 }
+
+.clock__heading{
+    font-weight: 100;
+    font-size: 20px;
+    text-transform: uppercase;
+    margin-bottom: 20vmin;
+}
+
+.clock__hand{
+    background: #fff;
+    position: absolute;
+    bottom: calc(50% - 40px);
+}
+
+.clock__hours{
+    width: 4px;
+    height: 30%;
+    left: calc(50% - 2px);
+    transform-origin: 2px calc(100% - 40px);
+}
+
+.clock__minutes{
+    width: 4px;
+    height: 40%;
+    left: calc(50% - 2px);
+    transform-origin: 2px calc(100% - 40px);
+}
+
+.clock__seconds{
+    width: 2px;
+    height: 50%;
+    left: calc(50% - 1px);
+    transform: rotate(45deg);
+    transform-origin: 1px calc(100% - 40px);
+}
+
+.countdown{
+    text-align: center;
+}
+
+.countdown__heading{
+    font-weight: 100;
+    font-size: 18px;
+}
+
+.countdown__body{
+    display: flex;
+    font-size: 26px;
+}
+
