@@ -108,7 +108,8 @@ body{
 }
 
 .countdown__body{
+    margin-top: 30px;
     display: flex;
-    font-size: 26px;
+    font-size: 16px;
 }
 
